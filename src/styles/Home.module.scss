@@ -4,6 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: calc(100% - 60px)_;
+
 
   .header{
     display: flex;
@@ -149,8 +151,6 @@
 
 @media (max-width: 815px){
   .content {
-    padding: 2rem;
-
     .cards {
       margin-top: 3rem;
 
@@ -169,8 +169,6 @@
 
 @media (max-width: 455px){
   .content {
-    padding: 1rem;
-
     .cards {
       .card {
         width: 130px;

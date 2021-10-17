@@ -41,3 +41,15 @@
     }
   }
 }
+
+@media (max-width: 815px){
+  .content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 455px){
+  .content {
+    padding: 1rem;
+  }
+}

@@ -13,13 +13,13 @@ interface Quiz {
 }
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false)
+  //   }, 3000)
+  // }, [])
 
   return isLoading ? (
     <Layout title='Carregando..'>
