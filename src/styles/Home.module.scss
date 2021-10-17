@@ -68,7 +68,7 @@
           border-left: 2px solid transparent !important;
           border-top: 2px solid transparent !important;
           border-right: 2px solid transparent !important;
-          border-bottom: 2px solid initial;
+          border-bottom: 2px solid var(--pink-500);
         }
 
         &.triangle::before{
@@ -221,7 +221,3 @@
     }
   }
 }
-
-
-
-

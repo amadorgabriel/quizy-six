@@ -1,13 +1,10 @@
 {
-  "name": "typescript-nextjs-starter",
-  "description": "A TypeScript starter for Next.js that includes all you need to build amazing projects",
+  "name": "QuizySix.",
   "version": "1.0.0",
   "private": true,
-  "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
   "license": "MIT",
   "keywords": [
     "nextjs",
-    "starter",
     "typescript"
   ],
   "scripts": {
@@ -29,6 +26,7 @@
   "dependencies": {
     "@types/node-sass": "^4.11.2",
     "next": "11.1.2",
+    "next-pwa": "^5.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
