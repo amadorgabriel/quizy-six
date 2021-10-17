@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,33 +7,221 @@
   height: 100vh;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  max-width: 1280px;
+  width: 100%;
+
+  flex: 1;
+  padding: 1rem 2rem 5rem 2rem;
+  height: calc(100% - 60px);
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h1::after {
+      content: '.';
+      color: var(--pink-500)
+    }
+
+    p {
+      max-width: 430px;
+      color: var(--gray-500);
+      font-size: 1.2rem;
+      margin-top: 8px;
+    }
+
+    .shapesWrapper{
+      display: flex;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+
+      span {
+        width: 18px;
+        height: 18px;
+        margin: 0 6px;
+        background-color: transparent;
+        border: 2px solid var(--pink-500);
+
+        &.circle {
+          border-radius: 50px;
+        }
+
+        &.triangle {
+          display: block ;
+          position: relative;
+          box-sizing: border-box;
+          width: 21px ;
+          height: 18px;
+
+          border-left: 2px solid transparent !important;
+          border-top: 2px solid transparent !important;
+          border-right: 2px solid transparent !important;
+          border-bottom: 2px solid initial;
+        }
+
+        &.triangle::before{
+          content: "";
+          display: block;
+          position: absolute;
+          box-sizing: border-box;
+          width: 17px;
+          height: 18px;
+
+          border-left: 2px;
+          border-left-style: solid;
+          border-left-color: var(--pink-500);
+
+          border-top-width: 2px;
+          border-top-style: solid;
+          border-top-color: var(--pink-500);
+
+          border-bottom-width: 2px;
+          border-bottom-style: solid;
+          border-bottom-color: transparent !important;
+
+          transform: rotate(45deg) skew(10deg,10deg);
+
+          left: -1px;
+          bottom: -10px
+        }
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    max-width: 800px;
+    flex-wrap: wrap;
+
+    .card {
+      width: 165px;
+      height: 185px;
+      padding: 1.5rem 1.2rem;
+      margin: .8rem;
+
+      display: flex;
+      align-items: flex-end;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+      background: linear-gradient(180deg, var(--green-300) 0%, var(--green-900) 100%);
+
+      h3 {
+        font-family: Lato;
+        font-weight: bold;
+        margin: 6px 0;
+      }
+
+      p {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 800;
+        color: var(--gray-300);
+        font-size: 0.8rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.createQuiz {
+        cursor: not-allowed;
+        align-items: flex-start;
+        background: linear-gradient(180deg, #DA3869 0%, #830028 100%);
+      }
+
+      &.comingSoon {
+        background: var(--black-900);
+        border: 3px dashed #1F1F1F;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: not-allowed;
+
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+  }
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.footer {
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid var(--gray-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-500);
+  font-weight: 600;
+
+  a {
+    color: var(--white-500);
+    padding-left: 4px;
+
+    &:hover {
+      color: var(--pink-500);
+      text-decoration: underline;
+    }
+  }
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+@media (max-width: 815px){
+  .content {
+    padding: 2rem;
+
+    .cards {
+      margin-top: 3rem;
+
+      .card {
+        margin: .5rem;
+      }
+    }
+
+    .header {
+      p {
+        max-width: 410px;
+      }
+    }
+  }
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 2rem;
+@media (max-width: 455px){
+  .content {
+    padding: 1rem;
+
+    .cards {
+      .card {
+        width: 130px;
+        height: 145px;
+      }
+    }
+
+    .header {
+      p {
+        max-width: 410px;
+      }
+    }
+  }
 }
 
-.title {
-  text-align: center;
-}
+
+
 
