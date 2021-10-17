@@ -1,0 +1,144 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    border: 3px solid var(--gray-300);
+    width: 40px;
+    height: 40px;
+    margin: 0 12px;
+    background-color: transparent;
+
+    animation-duration: 3s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+
+    &.circle {
+      border-radius: 50px;
+      animation-name: loadingOne;
+    }
+
+    &.triangle {
+      display: block ;
+      position: relative;
+      box-sizing: border-box;
+      width: 48.5px ;
+      height: 40px;
+
+      border-left: 3px solid transparent !important;
+      border-top: 3px solid transparent !important;
+      border-right: 3px solid transparent !important;
+      border-bottom: 3px solid initial;
+
+      animation-name: loadingTwo;
+    }
+
+    &.triangle::before{
+      content: "";
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      width: 37px;
+      height: 40px;
+
+      border-left: 3px;
+      border-left-style: solid;
+      border-left-color: initial;
+
+      border-top-width: 3px;
+      border-top-style: solid;
+      border-top-color: initial;
+
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+      border-bottom-color: transparent !important;
+
+      animation-duration: 3s;
+      animation-timing-function: step-end;
+      animation-iteration-count: infinite;
+      animation-name: loadingFour;
+      transform: rotate(45deg) skew(10deg,10deg);
+
+      left: 1.5px;
+      bottom: -21px
+    }
+
+    &.square {
+      animation-name: loadingThree;
+    }
+  }
+}
+
+@keyframes loadingOne {
+  0% {
+    border-color: var(--gray-300);
+  }
+
+  35% {
+    border-color: var(--pink-500);
+  }
+
+  68% {
+    border-color: var(--gray-300);
+  }
+
+  100% {
+    border-color: var(--gray-300);
+  }
+}
+
+@keyframes loadingTwo {
+  0% {
+    border-color: var(--gray-300);
+  }
+
+  33% {
+    border-color: var(--gray-300);
+  }
+
+  68% {
+    border-bottom-color: var(--pink-500);
+  }
+
+  100% {
+    border-color: var(--gray-300);
+  }
+}
+
+@keyframes loadingThree {
+  0% {
+    border-color: var(--pink-500);
+  }
+
+  33% {
+    border-color: var(--gray-300);
+  }
+
+  66% {
+    border-color: var(--gray-300);
+  }
+
+  100% {
+    border-color: var(--pink-500);
+  }
+}
+
+@keyframes loadingFour {
+  0% {
+    border-color: var(--gray-300);
+  }
+
+  33% {
+    border-color: var(--gray-300);
+  }
+
+  68% {
+    border-top-color: var(--pink-500);
+    border-left-color: var(--pink-500);
+  }
+
+  100% {
+    border-color: var(--gray-300);
+  }
+}

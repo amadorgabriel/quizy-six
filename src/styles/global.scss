@@ -27,6 +27,7 @@
  --green-900: #004132;
  --blue-500: #345484;
  --yellow-500: #DFD12C;
+ --gray-300: #C4C4C4;
  --gray-500: #7E7E7E;
  --white-500: #F0F0F0;
  --red-500: #B62121;
@@ -35,7 +36,6 @@
 body {
   background-color: var(--black-800);
   color: var(--white-500);
-  font-family: "Lato", sans-serif;
 }
 
 body,
@@ -43,6 +43,7 @@ input,
 button,
 select,
 textarea {
+  font-family: "Lato", sans-serif;
   font: 400 1rem var(--white-500);
 }
 
