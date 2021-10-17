@@ -1,0 +1,150 @@
+{
+  "quizes" : [
+    {
+      "title": "Pokémon",
+      "rounds": 6,
+      "slug": "pokemon",
+      "questions": [
+        {
+          "title": "Qual desses é um pokemon?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 2,
+          "seconds": 30,
+          "alternatives": [
+            "Svelte",
+            "Mongoose",
+            "Gyrados",
+            "Skala"
+          ]
+        },
+        {
+          "title": "Qual desses é um pokemon?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 2,
+          "seconds": 30,
+          "alternatives": [
+            "Svelte",
+            "Mongoose",
+            "Gyrados",
+            "Skala"
+          ]
+        },
+        {
+          "title": "Qual desses é um pokemon?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 2,
+          "seconds": 30,
+          "alternatives": [
+            "Svelte",
+            "Mongoose",
+            "Gyrados",
+            "Skala"
+          ]
+        },
+        {
+          "title": "Qual desses é um pokemon?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 2,
+          "seconds": 30,
+          "alternatives": [
+            "Svelte",
+            "Mongoose",
+            "Gyrados",
+            "Skala"
+          ]
+        },
+        {
+          "title": "Qual desses é um pokemon?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 2,
+          "seconds": 30,
+          "alternatives": [
+            "Svelte",
+            "Mongoose",
+            "Gyrados",
+            "Skala"
+          ]
+        },
+        {
+          "title": "Qual desses é um pokemon?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 2,
+          "seconds": 30,
+          "alternatives": [
+            "Svelte",
+            "Mongoose",
+            "Gyrados",
+            "Skala"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Filmes e Séries",
+      "rounds": 5,
+      "slug": "filmes-e-series",
+      "questions": [
+        {
+          "title": "Qual seriado de TV mostra o cotidiano da Familia Kyle?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 1,
+          "seconds": 30,
+          "alternatives": [
+            "Todo mundo odeia o Chris",
+            "Eu a Patroa e as Crianças",
+            "As visões da Raves",
+            "Arnold"
+          ]
+        },
+        {
+          "title": "Qual seriado de TV mostra o cotidiano da Familia Kyle?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 1,
+          "seconds": 30,
+          "alternatives": [
+            "Todo mundo odeia o Chris",
+            "Eu a Patroa e as Crianças",
+            "As visões da Raves",
+            "Arnold"
+          ]
+        },
+        {
+          "title": "Qual seriado de TV mostra o cotidiano da Familia Kyle?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 1,
+          "seconds": 30,
+          "alternatives": [
+            "Todo mundo odeia o Chris",
+            "Eu a Patroa e as Crianças",
+            "As visões da Raves",
+            "Arnold"
+          ]
+        },
+        {
+          "title": "Qual seriado de TV mostra o cotidiano da Familia Kyle?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 1,
+          "seconds": 30,
+          "alternatives": [
+            "Todo mundo odeia o Chris",
+            "Eu a Patroa e as Crianças",
+            "As visões da Raves",
+            "Arnold"
+          ]
+        },
+        {
+          "title": "Qual seriado de TV mostra o cotidiano da Familia Kyle?",
+          "description": "Experimente colocar nomes de pokémons em seu portfólio, vamos se o RH adivinha..",
+          "answerIndex": 1,
+          "seconds": 30,
+          "alternatives": [
+            "Todo mundo odeia o Chris",
+            "Eu a Patroa e as Crianças",
+            "As visões da Raves",
+            "Arnold"
+          ]
+        }
+      ]
+    }
+  ]
+}
