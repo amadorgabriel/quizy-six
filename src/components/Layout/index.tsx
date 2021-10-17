@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head'
+import Link from 'next/link'
 
-import styles from './Layout.module.scss';
+import styles from './Layout.module.scss'
 
 interface LayoutProps {
-  title?: string;
-  hasFooter?: boolean;
-  children: React.ReactNode;
+  title?: string
+  hasFooter?: boolean
+  children: React.ReactNode
 }
 
 export const Layout = ({
@@ -26,12 +26,12 @@ export const Layout = ({
         <footer className={styles.footer}>
           <p>
             Avaliable on
-            <Link href="https://github.com/amador2014/QuizySix">
-              <a target="_blank">@Github.</a>
+            <Link href='https://github.com/amador2014/QuizySix'>
+              <a target='_blank'>@Github.</a>
             </Link>
           </p>
         </footer>
       )}
     </div>
-  );
-};
+  )
+}

@@ -1,32 +1,32 @@
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import { Loader } from '@/components/Loader';
+import Link from 'next/link'
+import { Loader } from '@/components/Loader'
+import { Layout } from '@/components/Layout'
+import React, { useEffect, useState } from 'react'
 
-import styles from '@/styles/Home.module.scss';
-import db from '../../db.json';
-import { Layout } from '@/components/Layout';
+import db from '../../db.json'
+import styles from '@/styles/Home.module.scss'
 
 interface Quiz {
-  title: string;
-  rounds: number;
-  slug: string;
+  title: string
+  rounds: number
+  slug: string
 }
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, []);
+      setIsLoading(false)
+    }, 3000)
+  }, [])
 
   return isLoading ? (
-    <Layout title="Carregando..">
+    <Layout title='Carregando..'>
       <Loader />
     </Layout>
   ) : (
-    <Layout title="Quizzes" hasFooter>
+    <Layout title='Quizzes' hasFooter>
       <div className={styles.content}>
         <div className={styles.header}>
           <div className={styles.shapesWrapper}>
@@ -64,5 +64,5 @@ export default function Home() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
