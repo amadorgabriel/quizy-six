@@ -18,15 +18,13 @@ interface Quiz {
 }
 
 interface QuizProps {
-  quiz: Quiz
+  quizData: Quiz
 }
 
-export default function Quiz({ quiz }: QuizProps) {
-  console.log(quiz)
-
+export default function Quiz({ quizData }: QuizProps) {
   return (
-    <Layout title={`Quiz | ${quiz?.title}`}>
-      <h1>{quiz?.title ?? `Em Breve..`}</h1>
+    <Layout title={`Quiz | ${quizData?.title}`}>
+      <h1>{quizData?.title ?? `Em Breve..`}</h1>
     </Layout>
   )
 }
