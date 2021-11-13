@@ -19,19 +19,19 @@
 :root {
   --black-500: #181818;
   --black-800: #090909;
-  --black-900: #0B0B0B;
-  --pink-300: #DB4975;
-  --pink-500: #DA3869;
+  --black-900: #0b0b0b;
+  --pink-300: #db4975;
+  --pink-500: #da3869;
   --pink-900: #830028;
-  --green-300: #0D735C;
-  --green-500: #00A84C;
+  --green-300: #0d735c;
+  --green-500: #00a84c;
   --green-900: #004132;
   --blue-500: #345484;
-  --yellow-500: #DFD12C;
-  --gray-300: #C4C4C4;
-  --gray-500: #7E7E7E;
-  --white-500: #F0F0F0;
-  --red-500: #B62121;
+  --yellow-500: #dfd12c;
+  --gray-300: #c4c4c4;
+  --gray-500: #7e7e7e;
+  --white-500: #f0f0f0;
+  --red-500: #b62121;
 }
 
 body {
@@ -75,5 +75,5 @@ button[disabled] {
 
 ::selection {
   background: var(--pink-300);
-  color: var(--white-500)
+  color: var(--white-500);
 }

@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { Loader } from '@/components/Loader'
 import { Layout } from '@/components/Layout'
-import React, { useEffect, useState } from 'react'
+import { useCursor } from '@/hooks/useCursor'
 
 import db from '../../db.json'
 import styles from '@/styles/Home.module.scss'
@@ -13,19 +12,14 @@ interface Quiz {
 }
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false)
+  const { switchCursor } = useCursor()
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false)
-  //   }, 3000)
-  // }, [])
+  const mouseHoverHandler = {
+    onMouseEnter: () => switchCursor(`hover`),
+    onMouseLeave: () => switchCursor(`pulse`),
+  }
 
-  return isLoading ? (
-    <Layout title='Carregando..'>
-      <Loader />
-    </Layout>
-  ) : (
+  return (
     <Layout title='Quizzes' hasFooter>
       <div className={styles.content}>
         <div className={styles.header}>
@@ -42,7 +36,7 @@ export default function Home() {
         <div className={styles.cards}>
           {db.quizes.map((quiz: Quiz, index) => (
             <Link href={`/quiz/${quiz.slug}`} key={index}>
-              <a className={styles.card}>
+              <a className={styles.card} {...mouseHoverHandler}>
                 <div>
                   <h3>{quiz.title}</h3>
                   <p>{quiz.rounds} Rounds</p>
@@ -51,7 +45,10 @@ export default function Home() {
             </Link>
           ))}
 
-          <div className={`${styles.card} ${styles.createQuiz}`}>
+          <div
+            className={`${styles.card} ${styles.createQuiz}`}
+            {...mouseHoverHandler}
+          >
             <div>
               <p>Em Breve</p>
               <h3>Crie seu quiz personalizado</h3>

@@ -5,6 +5,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang='pt-BR'>
         <Head>
+          {/* Fonts */}
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
@@ -12,15 +13,20 @@ export default class MyDocument extends Document {
             rel='stylesheet'
           />
 
+          {/* Manifest */}
           <link rel='manifest' href='/manifest.json' />
-          <link rel='apple-touch-icon' href='./icon_black.png'></link>
+
+          {/* Metatags */}
+          <meta name='msapplication-navbutton-color' content='#090909' />
           <meta name='theme-color' content='#090909' />
           <meta
             name='apple-mobile-web-app-status-bar-style'
             content='#090909'
           />
-          <meta name='msapplication-navbutton-color' content='#090909' />
 
+          {/* Icons */}
+          <link rel='apple-touch-startup-image' href='./icon_512.png' />
+          <link rel='apple-touch-icon' href='./icon_black.png'></link>
           <link
             rel='shortcut icon'
             href='./icon_white.png'

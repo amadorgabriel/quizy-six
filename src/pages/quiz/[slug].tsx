@@ -1,5 +1,8 @@
 import { Layout } from '@/components/Layout'
+import { H1 } from '@/components/Typografy'
+
 import { GetStaticPaths, GetStaticProps } from 'next'
+import React from 'react'
 
 import db from '../../../db.json'
 
@@ -8,6 +11,7 @@ interface Question {
   description: string
   answerIndex: number
   seconds: number
+  points: number
   alternatives: string[]
 }
 
@@ -23,8 +27,8 @@ interface QuizProps {
 
 export default function Quiz({ quizData }: QuizProps) {
   return (
-    <Layout title={`Quiz | ${quizData?.title}`}>
-      <h1>{quizData?.title ?? `Em Breve..`}</h1>
+    <Layout hasHeader title={`Quiz | ${quizData?.title}`}>
+      <H1>{quizData?.title ?? `Em Breve..`}</H1>
     </Layout>
   )
 }
