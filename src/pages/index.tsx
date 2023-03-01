@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Layout } from '@/components/Layout'
-import { useCursor } from '@/hooks/useCursor'
 
 import db from '../../db.json'
 import styles from '@/styles/Home.module.scss'
@@ -12,15 +11,8 @@ interface Quiz {
 }
 
 export default function Home() {
-  const { switchCursor } = useCursor()
-
-  const mouseHoverHandler = {
-    onMouseEnter: () => switchCursor(`hover`),
-    onMouseLeave: () => switchCursor(`pulse`),
-  }
-
   return (
-    <Layout title='Quizzes' hasFooter>
+    <Layout title='QuizySix'>
       <div className={styles.content}>
         <div className={styles.header}>
           <div className={styles.shapesWrapper}>
@@ -36,7 +28,7 @@ export default function Home() {
         <div className={styles.cards}>
           {db.quizes.map((quiz: Quiz, index) => (
             <Link href={`/quiz/${quiz.slug}`} key={index}>
-              <a className={styles.card} {...mouseHoverHandler}>
+              <a className={styles.card}>
                 <div>
                   <h3>{quiz.title}</h3>
                   <p>{quiz.rounds} Rounds</p>
@@ -45,10 +37,7 @@ export default function Home() {
             </Link>
           ))}
 
-          <div
-            className={`${styles.card} ${styles.createQuiz}`}
-            {...mouseHoverHandler}
-          >
+          <div className={`${styles.card} ${styles.createQuiz}`}>
             <div>
               <p>Em Breve</p>
               <h3>Crie seu quiz personalizado</h3>
